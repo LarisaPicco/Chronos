@@ -1,6 +1,9 @@
 const cronometro = document.getElementById('cronometro');
+let audioEtiqueta1 = document.getElementById('audio');
+let audioEtiqueta2 = document.getElementById('audio2')
 const botonInicioPausa = document.getElementById('boton-inicio-pausa');
 const botonReiniciar = document.getElementById('boton-reiniciar');
+
 
 
 let [horas, minutos, segundos] = [0, 0, 0];
@@ -46,12 +49,17 @@ botonInicioPausa.addEventListener('click', function(){
     botonInicioPausa.classList.remove('iniciar');
     botonInicioPausa.classList.add('pausar');
     estadoCronometro = 'andando';
+    /*Reproducir audio */
+    audioEtiqueta1.play();
 } else{ /*cuando el estado del cronometro no es pausado, entonces su estado es andando*/
    window.clearInterval(intervaloDeTiempo)
    botonInicioPausa.innerHTML ='<i class="bi bi-play-fill"></i>';
    botonInicioPausa.classList.remove('pausar');
    botonInicioPausa.classList.add('iniciar');
-   estadoCronometro = 'pausado'; }
+   estadoCronometro = 'pausado'; 
+   /*Reproducir audio */
+   audioEtiqueta2.play();
+      }
 }
 );
 
@@ -68,7 +76,11 @@ botonReiniciar.addEventListener('click', function(){
     botonInicioPausa.innerHTML = '<i class="bi bi-play-fill"></i>';
     botonInicioPausa.classList.remove('pausar');
     botonInicioPausa.classList.add('iniciar');
+      /*Reproducir audio */
+        audioEtiqueta2.play()
 
     /*Estado */
     estadoCronometro = 'pausado';
 })
+
+
