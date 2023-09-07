@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background: url(imagenes/wp6250392-gris-game-wallpapers.jpg) no-repeat center center/cover;
+}
+
+.contenedor-principal{
+    width: 30vw;
+    max-width: 600px;
+    min-height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8ebff ;
+    border-radius: 40px;
+    border: 3px solid #977FD7;
+    
+}
+
+
+.contenedor-botones{
+      padding: 20px;  /*separacion entre los botones*/
+    
+}
+
+#cronometro {
+    width: 100%;
+    font-size: 80px;
+    font-weight: bold;
+    user-select: none;
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+.boton{
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    margin: 10px;
+    padding: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 50px;
+ }
+
+
+
+ .boton:hover{
+    opacity: 0.7;
+    background-color: #ADA1E6;
+ }
+
+
+#boton-inicio-pausa.iniciar, /*cuando el botón esté en estado de inicio*/
+#boton-inicio-pausa.iniciar i {  /*el elemento i representa el icono de bootstrap*/
+    background-color: #9CCFE7 ;
+
+}
+
+#boton-inicio-pausa.pausar,    /*cuando el botón esté en estado de pausa*/
+#boton-inicio-pausa.pausar i {
+    background-color: #977FD7;
+
+}
+
+#boton-reiniciar {
+    background-color: #F5A9CB;
+}
