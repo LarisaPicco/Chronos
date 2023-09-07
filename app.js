@@ -25,7 +25,7 @@ function actualizarCronometro() {
    const minutosConFormato = asignarFormato(minutos);
    const horasConFormato = asignarFormato(horas);
 
-   cronometro.innerText = `${horasConFormato} : ${minutosConFormato} : ${segundosConFormato}`;
+   cronometro.innerText=`${horasConFormato}:${minutosConFormato}:${segundosConFormato}`;
 }
 
 function asignarFormato(unidadDeTiempo){
@@ -48,7 +48,7 @@ botonInicioPausa.addEventListener('click', function(){
     estadoCronometro = 'andando';
 } else{ /*cuando el estado del cronometro no es pausado, entonces su estado es andando*/
    window.clearInterval(intervaloDeTiempo)
-   botonInicioPausa.innerHTML = '<i class="bi bi-play-fill"></i>';
+   botonInicioPausa.innerHTML ='<i class="bi bi-play-fill"></i>';
    botonInicioPausa.classList.remove('pausar');
    botonInicioPausa.classList.add('iniciar');
    estadoCronometro = 'pausado'; }

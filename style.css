@@ -13,7 +13,7 @@ body{
 }
 
 .contenedor-principal{
-    width: 30vw;
+    width:30vw;
     max-width: 600px;
     min-height: 350px;
     display: flex;
@@ -74,3 +74,34 @@ body{
 #boton-reiniciar {
     background-color: #F5A9CB;
 }
+
+@media (min-width:501px) and (max-width:900px) {
+    body{
+       background: url(imagenes/celular.jpg) no-repeat center center/cover;
+    }
+    .contenedor-principal{
+       width: 60vw;
+   }
+   }
+
+@media (max-width:500px) {
+ body{
+    background: url(imagenes/celular.jpg) no-repeat center center/cover;
+ }
+ .contenedor-principal{
+    width: 80vw;
+}
+}
+
+/* En caso de tener imagenes una al lado de la otra,
+en el celular tienen que verse una arriba de la otra, 
+y en ese caso tengo que modificar el flex dentro del @media
+     @media (max-width:500px) {
+        div que contenga imagenes {
+          display:flex;
+          flex-direction: column;
+          align-items: center;
+
+        }
+
+    } */
