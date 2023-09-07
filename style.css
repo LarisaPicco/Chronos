@@ -91,6 +91,9 @@ body{
  .contenedor-principal{
     width: 80vw;
 }
+#cronometro {
+    font-size: 65px;
+}
 }
 
 /* En caso de tener imagenes una al lado de la otra,
